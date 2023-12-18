@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta />
+    <style>
+      .base {
+        font-family: kodchasan;
+        /* background-color: aliceblue; */
+        height: full;
+      }
+      h1 {
+        text-align: center;
+      }
+      .container {
+        align-items: center;
+        background-color: rgb(152, 183, 166);
+        height: 100%;
+        padding: 20px;
+        margin: 15px;
+      }
+      form {
+        border-radius: 10%;
+        background-color: cadetblue;
+        width: fit-content;
+        align-items: center;
+        align-content: center;
+        stroke: black;
+        margin: 0 auto;
+        width: 50px;
+        text-align: center;
+      }
+      img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 250px;
+        height: 250px;
+      }
+      #image1 {
+        background-image: url("umbrella.png");
+        width: 450px;
+        height: 400px;
+        left: 50px; /* play around with this */
+        position: absolute;
+        top: 90px; /* and play around with this */
+      }
+      #image2 {
+        background-image: url("drizzy.png");
+        width: 550px;
+        height: 350px;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative; /* and this has to be relative */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="base">
+      <h1>Weathering with You</h1>
+      <div class="container">
+        <div class="content">
+          <div id="image1">
+            <div id="image2"></div>
+          </div>
+          <!-- <img src="drizzy.png" id="image1"/>
+          <img src="umbrella.png" id="image2" alt="an umbrella" /> -->
+          <form action="#"><a href="#">open</a></form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
