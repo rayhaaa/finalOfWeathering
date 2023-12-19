@@ -1,16 +1,170 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta>
-        <style></style>
-    </head>
-    <body>
-        <div class="container">
-            <ul>
-                <li>Home</li>
-                <li>Search</li>
-                <li>About</li>
-            </ul>
+  <head>
+    <meta />
+    <style>
+      .base {
+        font-family: Kodchasan;
+        /* background-color: aliceblue; */
+        height: full;
+      }
+      h1 {
+        font-family: k;
+        text-align: center;
+        color: #4682a9;
+      }
+      .container {
+        align-items: center;
+        background-color: rgb(152, 183, 166);
+        height: 100%;
+        padding: 20px;
+        margin: 15px;
+      }
+      .sidenav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+      }
+
+      .sidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+      }
+
+      .sidenav a:hover {
+        color: #f1f1f1;
+      }
+
+      .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+      }
+      .card {
+        background-color: #d9d9d9;
+        height: 200px;
+        width: 150px;
+        margin: 10px;
+        border-radius: 7px;
+      }
+      #kartu {
+        padding: 10px;
+        border-radius: 10px;
+        background-color: #c2cacc;
+      }
+      #grafik {
+        padding: 10px;
+        border-radius: 10px;
+        background-color: #c2cacc;
+      }
+      #gambarKartu {
+        height: 150px;
+        width: 130px;
+      }
+      .card-text {
+        text-align: center;
+      }
+      .form-control {
+        background-color: #4682a9;
+        width: 250px;
+        height: 25px;
+        border-radius: 20px;
+        border: 0cm;
+      }
+      ::placeholder {
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="base">
+      <h1>Weathering with You</h1>
+      <div class="container" id="main">
+        <span style="font-size: 30px; cursor: pointer" onclick="openNav()"
+          >&#9776;</span
+        >
+        <div class="sidenav">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+            >&times;</a
+          >
+          <a>Home</a>
+          <a>Search</a>
+          <a>About</a>
         </div>
-    </body>
+        <!-- <input type="search" id="search" class="search" placeholder="cari di sini.."></input> -->
+        <table border="0" cellspacing="5" cellpadding="5">
+          <tbody>
+            <tr>
+              <td>
+                <input
+                  class="form-control"
+                  type="text"
+                  placeholder="Cari di sini.."
+                  name="search"
+                  id="searchInput"
+                />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="container" id="kartu">
+          <div class="col row-cols-1 row-cols-md-2 g-4">
+            <div class="row">
+              <div class="card">
+                <img class="card-img-top" id="gambarKartu" src="umbrella.png" />
+                <div class="card-body">
+                  <h2 class="card-text">Yogyakarta</h2>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="card">
+                <img class="card-img-top" id="gambarKartu" src="umbrella.png" />
+                <div class="card-body">
+                  <h2 class="card-text">Yogyakarta</h2>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="card">
+                <img class="card-img-top" id="gambarKartu" src="umbrella.png" />
+                <div class="card-body">
+                  <h2 class="card-text">Yogyakarta</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container" id="grafik">
+          <div>grafik ya siapin tempat luas</div>
+        </div>
+      </div>
+    </div>
+    <script>
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+        document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+      }
+
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+        document.body.style.backgroundColor = "white";
+      }
+    </script>
+  </body>
 </html>

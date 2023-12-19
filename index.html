@@ -3,17 +3,24 @@
   <head>
     <meta />
     <style>
+      @font-face {
+        font-family: Kodchasan;
+        src: url('Kodchasan-Bold.ttf');
+      }
       .base {
-        font-family: kodchasan;
+        font-family: Kodchasan;
         /* background-color: aliceblue; */
         height: full;
+        border-radius: 10px;
       }
       h1 {
+        font-family: k;
         text-align: center;
+        color: #4682A9;
       }
       .container {
         align-items: center;
-        background-color: rgb(152, 183, 166);
+        background-color: #5B8D97;
         height: 100%;
         padding: 20px;
         margin: 15px;
@@ -26,8 +33,14 @@
         align-content: center;
         stroke: black;
         margin: 0 auto;
-        width: 50px;
+        margin-top: 30px;
+        width: 85px;
+        height: 40px;
         text-align: center;
+      }
+      a {
+        font-size: 25px;
+        color: whitesmoke;
       }
       img {
         display: block;
@@ -37,20 +50,24 @@
         height: 250px;
       }
       #image1 {
-        background-image: url("umbrella.png");
+        /* background-image: url("umbrella.png"); */
         width: 450px;
         height: 400px;
-        left: 50px; /* play around with this */
+        left: 570px; /* play around with this */
         position: absolute;
-        top: 90px; /* and play around with this */
+        top: 130px; /* and play around with this */
       }
       #image2 {
-        background-image: url("drizzy.png");
-        width: 550px;
+        /* background-image: url("drizzy.png"); */
+        width: 350px;
         height: 350px;
         margin-left: auto;
         margin-right: auto;
         position: relative; /* and this has to be relative */
+      }
+      .content {
+        margin: 50px;
+        padding: 50px;
       }
     </style>
   </head>
@@ -59,12 +76,12 @@
       <h1>Weathering with You</h1>
       <div class="container">
         <div class="content">
-          <div id="image1">
+          <!-- <div id="image1">
             <div id="image2"></div>
-          </div>
-          <!-- <img src="drizzy.png" id="image1"/>
-          <img src="umbrella.png" id="image2" alt="an umbrella" /> -->
-          <form action="#"><a href="#">open</a></form>
+          </div> -->
+          <img src="umbrella.png" id="image2"/>
+          <img src="ujan.gif" id="image1">
+          <form action="#"><a href="../finalOfWeathering/dashboard.html">Open</a></form>
         </div>
       </div>
     </div>
